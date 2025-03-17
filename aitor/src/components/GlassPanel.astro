@@ -1,0 +1,30 @@
+---
+export interface Props {
+  title: string;
+  buttonText?: string;
+  buttonLink?: string;
+  hasDecoration?: boolean;
+  className?: string;
+  showButton?: boolean;
+}
+
+const { 
+  title, 
+  buttonText = "Explore", 
+  buttonLink = "#",
+  hasDecoration = false,
+  className = "",
+  showButton = true
+} = Astro.props;
+---
+
+<div class={`glass-panel ${className}`}>
+  {hasDecoration && <div class="nomai-decoration"></div>}
+  <h2>{title}</h2>
+  <slot />
+  {showButton && buttonText && <a href={buttonLink} class="accent-button">{buttonText}</a>}
+</div>
+
+<style>
+  /* You can include component-specific styles here */
+</style>

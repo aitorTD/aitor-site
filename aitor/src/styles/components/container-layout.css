@@ -1,0 +1,28 @@
+/* Container row for side-by-side panels */
+.container-row {
+  display: flex;
+  gap: 2rem;
+  margin: 2rem auto;
+  max-width: 1200px; /* Match the max-width of info-container */
+  padding: 0 2rem; /* Match the padding of info-container */
+}
+
+/* Make info containers in a row share the space */
+.container-row .info-container {
+  flex: 1;
+  margin: 0;
+  padding: 0; /* Remove padding from nested info-containers */
+  min-width: 0; /* Allow containers to shrink below content size if needed */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container-row {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .container-row .info-container {
+    width: 100%;
+  }
+}

@@ -1,0 +1,102 @@
+.intro-section {
+  margin-top: 4rem;
+}
+
+.intro-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.avatar-container {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  flex-shrink: 0;
+}
+
+.avatar-orbit {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px dashed var(--color-primary-medium);
+  border-radius: 50%;
+  /* Removing the orbit animation */
+  /* animation: orbit 20s linear infinite; */
+}
+
+.avatar-planet {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle at 30% 30%, var(--color-primary-light), var(--color-primary-dark));
+  border-radius: 50%;
+  top: 15px;
+  left: 15px;
+  box-shadow: 0 0 30px var(--color-primary-medium);
+  border: 3px solid var(--color-primary-medium);
+  overflow: hidden; /* Ensure the image stays within the circular container */
+}
+
+.avatar-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This ensures the image covers the area without distortion */
+  display: block;
+}
+
+.text-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.intro-title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.highlight-text {
+  color: var(--color-primary);
+  position: relative;
+}
+
+.highlight-text::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--color-primary-medium);
+  transform-origin: right;
+  animation: lineGrow 3s ease-in-out infinite;
+}
+
+.intro-description {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  white-space: normal; /* Changed from nowrap to normal */
+  overflow: visible; /* Changed from hidden to visible */
+  width: 100%; /* Changed from 0 to 100% */
+  animation: fadeIn 1.5s ease-in-out forwards; /* Changed from typing animation */
+  opacity: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .intro-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .intro-description {
+    white-space: normal;
+    border-right: none;
+    width: 100%;
+    animation: fadeIn 2s ease-in-out 1s forwards;
+  }
+}

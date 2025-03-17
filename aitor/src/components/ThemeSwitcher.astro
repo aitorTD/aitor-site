@@ -1,0 +1,38 @@
+---
+// Theme switcher component
+---
+
+<div class="theme-switcher">
+  <div class="color-option color-mint active" data-theme="mint" title="Timber Hearth"></div>
+  <div class="color-option color-teal" data-theme="teal" title="Giant's Deep"></div>
+  <div class="color-option color-orange" data-theme="orange" title="Ember Twin"></div>
+  <div class="color-option color-indigo" data-theme="indigo" title="Brittle Hollow"></div>
+</div>
+
+<script>
+  import { applyTheme } from '../utils/themeManager';
+  
+  // Theme switcher functionality
+  document.addEventListener('DOMContentLoaded', () => {
+    const colorOptions = document.querySelectorAll('.color-option');
+    
+    // Add click event to each color option
+    colorOptions.forEach(option => {
+      option.addEventListener('click', () => {
+        const themeName = option.getAttribute('data-theme');
+        if (themeName) {
+          // Remove active class from all options
+          colorOptions.forEach(opt => opt.classList.remove('active'));
+          // Add active class to clicked option
+          option.classList.add('active');
+          // Apply the theme
+          applyTheme(themeName);
+        }
+      });
+    });
+    
+    // Load saved theme preference or default to mint
+    const savedTheme = localStorage.getItem('preferred-theme') || 'mint';
+    applyTheme(savedTheme);
+  });
+</script>

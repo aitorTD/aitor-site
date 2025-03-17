@@ -1,0 +1,249 @@
+---
+const currentYear = new Date().getFullYear();
+
+const socialLinks = [
+  { 
+    name: "GitHub", 
+    url: "https://github.com", 
+    icon: `<path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd">`
+  },
+  { 
+    name: "LinkedIn", 
+    url: "https://linkedin.com", 
+    icon: `<path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z">`
+  }
+];
+---
+
+<footer class="site-footer relative z-10 mt-16">
+  <div class="footer-glow absolute inset-0 opacity-0"></div>
+  
+  <div class="container mx-auto px-6 py-12">
+    <!-- Minimalist divider with animation -->
+    <div class="divider-container overflow-hidden mb-12">
+      <div class="divider"></div>
+    </div>
+    
+    <!-- Two-column layout for larger screens, single column for mobile -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
+      <!-- Brand section -->
+      <div class="footer-brand fade-in-up" style="--delay: 0.1s">
+        <a href="/" class="inline-block mb-4">
+          <span class="text-white text-2xl font-light tracking-wider">
+            <span class="font-medium">A</span>itor
+          </span>
+        </a>
+        <p class="text-gray-400 text-sm max-w-md leading-relaxed">
+          Creating beautiful digital experiences with modern web technologies and interactive designs that push the boundaries of what's possible on the web.
+        </p>
+      </div>
+      
+      <!-- Links and social section -->
+      <div class="grid grid-cols-2 gap-8">
+        <!-- Quick links -->
+        <div class="fade-in-up" style="--delay: 0.2s">
+          <h3 class="text-white text-sm uppercase tracking-widest mb-6 font-light">Explore</h3>
+          <ul class="space-y-3">
+            <li><a href="/" class="footer-link">Home</a></li>
+            <li><a href="/about" class="footer-link">About</a></li>
+            <li><a href="/projects" class="footer-link">Projects</a></li>
+            <li><a href="/contact" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+        
+        <!-- Social links -->
+        <div class="fade-in-up" style="--delay: 0.3s">
+          <h3 class="text-white text-sm uppercase tracking-widest mb-6 font-light">Connect</h3>
+          <div class="flex space-x-4">
+            {socialLinks.map((social) => (
+              <a 
+                href={social.url} 
+                class="social-icon-link" 
+                aria-label={social.name}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" set:html={social.icon} />
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Copyright -->
+    <div class="text-center pt-8 border-t border-gray-800 text-gray-500 text-xs fade-in-up" style="--delay: 0.4s">
+      <p>&copy; {currentYear} <span class="font-medium">Aitor</span>. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background-color: rgba(5, 10, 36, 0.2);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid var(--color-primary-light);  /* Use theme variable */
+  }
+  
+  .site-footer a {
+    transition: all 0.2s ease;
+    color: rgba(240, 245, 255, 0.7); /* Add default light color for all links */
+  }
+  
+  .site-footer a:hover {
+    transform: translateY(-2px);
+    color: var(--color-primary);  /* Use theme variable */
+  }
+  
+  /* Footer link specific styling */
+  .footer-link {
+    color: rgba(240, 245, 255, 0.7);
+    font-size: 0.95rem;
+    display: inline-block;
+    position: relative;
+  }
+  
+  .footer-link:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--color-primary);
+    transition: width 0.3s ease;
+  }
+  
+  .footer-link:hover:after {
+    width: 100%;
+  }
+  
+  /* Social icon links */
+  .social-icon-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(240, 245, 255, 0.7);
+    transition: all 0.3s ease;
+  }
+  
+  .social-icon-link:hover {
+    color: var(--color-primary);
+    transform: translateY(-3px);
+    filter: drop-shadow(0 0 8px var(--color-primary-medium));
+  }
+  
+  /* Footer glow effect */
+  .footer-glow {
+    background: radial-gradient(circle at center, var(--color-primary-light) 0%, transparent 70%);  /* Use theme variable */
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .site-footer:hover .footer-glow {
+    opacity: 0.5;
+  }
+  
+  /* Animated divider */
+  .divider-container {
+    position: relative;
+    height: 2px;
+    width: 100%;
+  }
+  
+  .divider {
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(90deg, transparent, var(--color-primary), transparent);  /* Use theme variable */
+    animation: divider-animation 8s infinite ease-in-out;
+  }
+  
+  @keyframes divider-animation {
+    0% { transform: translateX(-100%); }
+    50% { transform: translateX(0); }
+    100% { transform: translateX(100%); }
+  }
+  
+  /* Social icons */
+  .social-icon {
+    transition: all 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    transform: translateY(-3px);
+    filter: drop-shadow(0 0 8px var(--color-primary-medium));  /* Use theme variable */
+  }
+  
+  /* Fade-in animations */
+  .fade-in-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s forwards;
+    animation-delay: calc(var(--delay, 0) * 1s);
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+
+<script>
+  // Intersection Observer for footer animations
+  document.addEventListener('DOMContentLoaded', () => {
+    const footer = document.querySelector('.site-footer');
+    const animatedElements = document.querySelectorAll('.fade-in-up');
+    
+    if (footer) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            // Trigger animations when footer comes into view
+            animatedElements.forEach(el => {
+              (el as HTMLElement).style.animationPlayState = 'running';
+            });
+            
+            // Add subtle pulse to the glow effect
+            const glow = footer.querySelector('.footer-glow');
+            if (glow) {
+              (glow as HTMLElement).style.opacity = '0.3';
+              
+              // Create subtle pulsing effect
+              let direction = 1;
+              let opacity = 0.3;
+              
+              const pulse = setInterval(() => {
+                opacity += 0.01 * direction;
+                
+                if (opacity >= 0.5) direction = -1;
+                if (opacity <= 0.2) direction = 1;
+                
+                (glow as HTMLElement).style.opacity = opacity.toString();
+              }, 100);
+              
+              // Clean up interval when user scrolls away
+              const cleanupObserver = new IntersectionObserver((entries) => {
+                if (!entries[0].isIntersecting) {
+                  clearInterval(pulse);
+                }
+              });
+              
+              cleanupObserver.observe(footer);
+            }
+            
+            observer.unobserve(footer);
+          }
+        });
+      }, { threshold: 0.2 });
+      
+      observer.observe(footer);
+      
+      // Pause animations initially
+      animatedElements.forEach(el => {
+        (el as HTMLElement).style.animationPlayState = 'paused';
+      });
+    }
+  });
+</script>

@@ -1,0 +1,31 @@
+.info-container {
+  position: relative;
+  z-index: 2; /* Ensure this is higher than the background z-index */
+  margin: 2rem auto;
+  max-width: 1200px;
+  padding: 2rem;
+}
+
+/* Outer Wilds inspired section titles */
+.section-title {
+  font-size: 2.5rem;
+  color: white;
+  text-align: center;
+  margin: 3rem 0 2rem;
+  text-shadow: 0 0 10px var(--color-primary-medium);
+  letter-spacing: 2px;
+  font-weight: 300;
+}
+
+/* Nomai writing style decorative element */
+.nomai-decoration {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border: 2px solid var(--color-primary-light);
+  border-radius: 50%;
+  top: -20px;
+  right: -20px;
+  z-index: -1;
+  opacity: 0.6;
+}

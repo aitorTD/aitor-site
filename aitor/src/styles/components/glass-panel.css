@@ -1,0 +1,47 @@
+.glass-panel {
+  background: rgba(25, 33, 52, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  border: 2px solid var(--color-primary-light); 
+  padding: 2rem;
+  color: white;
+  box-shadow: 0 4px 30px var(--color-primary-medium); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(25, 33, 52, 0.15),
+    rgba(25, 33, 52, 0.15) 60%,
+    rgba(83, 61, 43, 0.2)
+  );
+}
+
+/* Add a subtle campfire glow to panels on hover */
+.glass-panel:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px var(--color-primary-dark);
+  border: 2px solid var(--color-primary-medium);
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(25, 33, 52, 0.15),
+    rgba(25, 33, 52, 0.15) 60%,
+    var(--color-primary-light)
+  );
+}
+
+/* Add subtle accent colors to headings - Outer Wilds style */
+.glass-panel h2 {
+  color: rgba(235, 240, 255, 1);
+  margin-top: 0;
+  font-size: 1.75rem;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid var(--color-primary-medium);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Make paragraph text more readable with Outer Wilds style */
+.glass-panel p {
+  color: rgba(240, 245, 255, 0.95);
+  line-height: 1.6;
+  font-size: 1.05rem;
+}

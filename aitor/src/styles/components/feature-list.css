@@ -1,0 +1,43 @@
+/* Custom styled list for feature highlights */
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.feature-list li {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  transition: transform 0.3s ease;
+}
+
+.feature-list li:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  width: 0.8rem;
+  height: 0.8rem;
+  background: var(--color-primary-light);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--color-primary-medium);
+  transition: all 0.3s ease;
+}
+
+.feature-list li:hover {
+  transform: translateX(5px);
+}
+
+.feature-list li:hover:before {
+  background: var(--color-primary);
+  box-shadow: 0 0 15px var(--color-primary);
+}
+
+.feature-list strong {
+  color: var(--color-primary);
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 0.2rem;
+}

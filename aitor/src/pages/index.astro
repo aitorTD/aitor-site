@@ -1,0 +1,70 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Test from "../components/test.vue";
+import ThreeLogo from "../components/ThreeLogo.vue";
+import ThemeSwitcher from "../components/ThemeSwitcher.astro";
+import ProfileSection from "../components/ProfileSection.astro";
+import GlassPanel from "../components/GlassPanel.astro";
+import "../styles/main.css";
+---
+
+<MainLayout title="Outer Wilds Explorer">
+  <Test client:visible slot="background" />
+  <!-- Changed from client:load to client:visible -->
+
+  <ThemeSwitcher slot="theme-switcher" />
+
+  <ProfileSection />
+  <div class="container-row">
+    <!-- Single container example (full width) -->
+    <section class="info-container">
+      <GlassPanel title="About Me" buttonText="Check my CV" buttonLink="/about">
+        <p>
+          I started my journey in IT and software development by studying <strong
+            >Web App Development</strong
+          > and later specialized in <strong
+            >Artificial Intelligence and Big Data</strong
+          >.
+          <br />
+          Since then, I've been continuously improving my skills, working on projects
+          that optimize workflows, enhance user experience, and leverage cloud-based
+          solutions.
+        </p>
+      </GlassPanel>
+    </section>
+
+    <section class="info-container">
+      <GlassPanel title="What I bring to the table" showButton={false}>
+        <p>
+          <ul class="feature-list">
+            <li>
+              <strong>Front-End & Back-End Development</strong> – Experience with
+              JavaScript, PHP, Python, Laravel, and MySQL.
+            </li>
+            <li>
+              <strong>Cloud & Infrastructure Optimization</strong> – Worked with
+              AWS, Google Cloud, and scalable IT solutions.
+            </li>
+            <li>
+              <strong>Data & AI</strong> – Built machine learning models using Python,
+              PySpark, and Power BI.
+            </li>
+            <li>
+              <strong>Problem-Solving Mindset</strong> – Love tackling complex issues
+              and optimizing workflows for efficiency.
+            </li>
+          </ul>
+        </p>
+      </GlassPanel>
+    </section>
+  </div>
+
+  <!-- Single container example (full width) -->
+  <section class="info-container">
+    <GlassPanel title="Some things about me" showButton={false}>
+      <p>
+        I really like listening to music
+      </p>
+    </GlassPanel>
+  </section>
+</MainLayout>
