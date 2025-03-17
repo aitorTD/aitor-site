@@ -64,7 +64,7 @@ const navItems = [
   #site-header {
     background-color: rgba(5, 10, 36, 0.2);
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(144, 176, 131, 0.2);  /* Green accent border */
+    border-bottom: 1px solid var(--color-primary-light, rgba(144, 176, 131, 0.2));  /* Use CSS variable */
     transform: translateY(0);
   }
   
@@ -113,7 +113,7 @@ const navItems = [
     left: 0;
     width: 0;
     height: 1px;
-    background-color: rgba(144, 176, 131, 0.8);  /* Green underline */
+    background-color: var(--color-primary-medium, rgba(144, 176, 131, 0.8));  /* Use CSS variable */
     transition: width 0.3s ease;
   }
   
@@ -203,6 +203,20 @@ const navItems = [
       }
       
       lastScrollY = currentScrollY;
+    });
+    
+    // Listen for theme changes
+    document.addEventListener('themeChanged', (event) => {
+      if (!(event as CustomEvent).detail) return;
+      
+      // Update custom properties if needed
+      if ((event as CustomEvent).detail?.primaryLight) {
+        document.documentElement.style.setProperty('--color-primary-light', (event as CustomEvent).detail.primaryLight);
+      }
+      
+      if ((event as CustomEvent).detail?.primaryMedium) {
+        document.documentElement.style.setProperty('--color-primary-medium', (event as CustomEvent).detail.primaryMedium);
+      }
     });
   });
 </script>

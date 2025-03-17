@@ -42,18 +42,24 @@
 
 
 /* Add to your animations CSS file */
+/* Consolidate the prefers-reduced-motion media query */
 @media (prefers-reduced-motion: reduce) {
-  .skill-tag, .skill-category, .fade-in-up, .typing-animation {
+  .skill-tag, .skill-category, .fade-in-up, .typing-animation,
+  .avatar-orbit, .avatar-container, .quantum-effect,
+  .feature-list li:hover {
     animation: none !important;
     opacity: 1 !important;
     transform: none !important;
   }
-  
-  .avatar-orbit, .avatar-container, .quantum-effect {
-    animation: none !important;
-  }
-  
+}
+
+/* Consolidate the prefers-reduced-motion media query */
+@media (prefers-reduced-motion: reduce) {
+  .skill-tag, .skill-category, .fade-in-up, .typing-animation,
+  .avatar-orbit, .avatar-container, .quantum-effect,
   .feature-list li:hover {
+    animation: none !important;
+    opacity: 1 !important;
     transform: none !important;
   }
 }

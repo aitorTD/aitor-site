@@ -1,7 +1,6 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Test from "../components/test.vue";
-import ThreeLogo from "../components/ThreeLogo.vue";
 import ThemeSwitcher from "../components/ThemeSwitcher.astro";
 import ProfileSection from "../components/ProfileSection.astro";
 import GlassPanel from "../components/GlassPanel.astro";
@@ -58,13 +57,4 @@ import "../styles/main.css";
       </GlassPanel>
     </section>
   </div>
-
-  <!-- Single container example (full width) -->
-  <section class="info-container">
-    <GlassPanel title="Some things about me" showButton={false}>
-      <p>
-        I really like listening to music
-      </p>
-    </GlassPanel>
-  </section>
 </MainLayout>
