@@ -378,7 +378,7 @@ export default {
 .night-sky-container {
   width: 100%;
   height: 100vh;
-  background: #121218; /* Dark gray background */
+  background: #242424; /* Dark gray background */
   overflow: hidden;
   position: relative;
   z-index: 0; /* Ensure this is lower than content z-index */

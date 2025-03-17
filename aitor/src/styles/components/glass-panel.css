@@ -13,6 +13,7 @@
     rgba(25, 33, 52, 0.15) 60%,
     rgba(83, 61, 43, 0.2)
   );
+  cursor: default; /* Add default cursor to the entire panel */
 }
 
 /* Add a subtle campfire glow to panels on hover */
@@ -37,6 +38,7 @@
   border-bottom: 2px solid var(--color-primary-medium);
   padding-bottom: 0.5rem;
   margin-bottom: 1rem;
+  cursor: default; /* Ensure headings have default cursor */
 }
 
 /* Make paragraph text more readable with Outer Wilds style */
@@ -44,4 +46,20 @@
   color: rgba(240, 245, 255, 0.95);
   line-height: 1.6;
   font-size: 1.05rem;
+  cursor: default; /* Ensure paragraphs have default cursor */
+}
+
+/* Ensure all text elements in glass panels have default cursor */
+.glass-panel *, 
+.glass-panel li, 
+.glass-panel strong, 
+.glass-panel span {
+  cursor: default;
+}
+
+/* Keep pointer cursor for interactive elements */
+.glass-panel a, 
+.glass-panel button, 
+.glass-panel .accent-button {
+  cursor: pointer !important;
 }

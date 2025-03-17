@@ -29,11 +29,11 @@ export const themes: Record<string, Theme> = {
     starColor: '0xd3965b'
   },
   indigo: {
-    primary: '#382f8e',
-    primaryLight: 'rgba(56, 47, 142, 0.5)',
-    primaryMedium: 'rgba(56, 47, 142, 0.8)',
-    primaryDark: 'rgba(56, 47, 142, 0.95)',
-    starColor: '0x382f8e'
+    primary: '#7b68ee',
+    primaryLight: 'rgba(123, 104, 238, 0.5)',
+    primaryMedium: 'rgba(123, 104, 238, 0.8)',
+    primaryDark: 'rgba(123, 104, 238, 0.95)',
+    starColor: '0x7b68ee'
   }
 };
 

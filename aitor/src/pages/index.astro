@@ -58,3 +58,21 @@ import "../styles/main.css";
     </section>
   </div>
 </MainLayout>
+
+<style>
+  /* Add this to your index.astro file to ensure default cursor on text elements */
+  .content p, 
+  .content h1, 
+  .content h2, 
+  .content h3, 
+  .content li,
+  .content span,
+  .glass-panel * {
+    cursor: default !important;
+  }
+  
+  /* Keep pointer cursor for interactive elements */
+  a, button, .color-option, .accent-button {
+    cursor: pointer !important;
+  }
+</style>
