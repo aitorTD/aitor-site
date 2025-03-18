@@ -1,0 +1,585 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Test from "../components/test.vue";
+import ThemeSwitcher from "../components/ThemeSwitcher.astro";
+import GlassPanel from "../components/GlassPanel.astro";
+import "../styles/main.css";
+---
+
+<MainLayout title="About Me | Outer Wilds Explorer">
+  <Test client:visible slot="background" />
+  <ThemeSwitcher slot="theme-switcher" />
+
+  <div class="container mx-auto px-0 pt-5 pb-5">
+    <h1 class="section-title">About Me</h1>
+
+    <!-- Removing the skill legend from here -->
+
+    <div class="info-container">
+      <div class="info-container">
+        <GlassPanel title="Professional Experience" showButton={false}>
+          <div class="timeline-minimal">
+            <div class="timeline-item-minimal">
+              <div class="timeline-header">
+                <div class="timeline-date">
+                  <strong>April 2024 - Ongoing</strong>
+                </div>
+                <h3><strong>IT Manager</strong></h3>
+                <p class="company"><strong>CL Granada</strong></p>
+              </div>
+              <ul class="experience-list">
+                <li>
+                  Automated key administrative workflows using <strong
+                    >Python scripts</strong
+                  >, reducing manual workload and improving operational
+                  efficiency.
+                </li>
+                <li>
+                  Developed and fine-tuned <strong
+                    >internal web platforms</strong
+                  >, enhancing UX and performance.
+                </li>
+                <li>
+                  Optimized IT infrastructure by implementing <strong
+                    >cloud-based solutions</strong
+                  >, improving scalability and security.
+                </li>
+              </ul>
+            </div>
+
+            <div class="timeline-item-minimal">
+              <div class="timeline-header">
+                <div class="timeline-date">
+                  <strong>March 2022 - June 2022</strong>
+                </div>
+                <h3><strong>FrontEnd Developer</strong></h3>
+                <p class="company"><strong>Grupo Trevenque</strong></p>
+              </div>
+              <ul class="experience-list">
+                <li>
+                  Customized advanced website templates to precisely match each
+                  client's <strong>brand identity</strong>, including color
+                  schemes, logos, and layouts.
+                </li>
+                <li>
+                  Resolved front-end design issues and optimized <strong
+                    >responsiveness</strong
+                  >, ensuring a seamless user experience.
+                </li>
+                <li>
+                  Developed and optimized front-end modules to enhance
+                  functionality, improving overall <strong
+                    >project efficiency</strong
+                  >.
+                </li>
+                <li>
+                  Oversaw the full <strong>deployment process</strong>,
+                  guaranteeing smooth, error-free releases for multiple client
+                  websites.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </GlassPanel>
+      </div>
+
+      <section class="info-container">
+        <GlassPanel title="Skills & Strengths" showButton={false}>
+          <!-- Adding the skill legend here -->
+          <div class="skill-legend">
+            <div class="legend-item">
+              <span class="legend-dot proficient"></span>
+              <span>Proficient</span>
+            </div>
+            <div class="legend-item">
+              <span class="legend-dot learning"></span>
+              <span>Used but still learning</span>
+            </div>
+            <div class="legend-item">
+              <span class="legend-dot planned"></span>
+              <span>Planning to learn</span>
+            </div>
+          </div>
+
+          <div class="skills-container">
+            <div class="skill-category">
+              <h3>Coding Languages</h3>
+              <div class="skill-grid">
+                <div class="skill-item proficient">
+                  <img
+                    src="https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/javascript/javascript-original.svg"
+                    alt="JavaScript"
+                    class="tech-icon"
+                  />
+                  <span>JavaScript</span>
+                </div>
+                <div class="skill-item proficient">
+                  <img
+                    src="https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/python/python-original.svg"
+                    alt="Python"
+                    class="tech-icon"
+                  />
+                  <span>Python</span>
+                </div>
+                <div class="skill-item proficient">
+                  <img
+                    src="https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/php/php-original.svg"
+                    alt="PHP"
+                    class="tech-icon"
+                  />
+                  <span>PHP</span>
+                </div>
+                <div class="skill-item learning">
+                  <img
+                    src="https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/swift/swift-original.svg"
+                    alt="Swift"
+                    class="tech-icon"
+                  />
+                  <span>Swift</span>
+                </div>
+                <div class="skill-item proficient">
+                  <img
+                    src="https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/mysql/mysql-original.svg"
+                    alt="SQL"
+                    class="tech-icon"
+                  />
+                  <span>SQL</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-category">
+              <h3>Frameworks & Tools</h3>
+              <div class="skill-grid">
+                <div class="skill-item proficient">
+                  <img
+                    src="https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/angular/angular-original.svg"
+                    alt="Angular"
+                    class="tech-icon"
+                  />
+                  <span>Angular</span>
+                </div>
+                <div class="skill-item learning">
+                  <img
+                    src="https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/laravel/laravel-original.svg"
+                    alt="Laravel"
+                    class="tech-icon"
+                  />
+                  <span>Laravel</span>
+                </div>
+                <div class="skill-item proficient">
+                  <img
+                    src="https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/github/github-original.svg"
+                    alt="GitHub"
+                    class="tech-icon"
+                  />
+                  <span>GitHub</span>
+                </div>
+                <div class="skill-item proficient">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg"
+                    alt="MySQL"
+                    class="tech-icon"
+                  />
+                  <span>MySQL</span>
+                </div>
+                <div class="skill-item learning">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original-wordmark.svg"
+                    alt="PySpark"
+                    class="tech-icon"
+                  />
+                  <span>PySpark</span>
+                </div>
+                <div class="skill-item learning">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original-wordmark.svg"
+                    alt="Power BI"
+                    class="tech-icon"
+                  />
+                  <span>Power BI</span>
+                </div>
+                <div class="skill-item planned">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg"
+                    alt="AWS"
+                    class="tech-icon"
+                  />
+                  <span>AWS</span>
+                </div>
+                <div class="skill-item planned">
+                  <img
+                    src="https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/neo4j/neo4j-original.svg"
+                    alt="Neo4j"
+                    class="tech-icon"
+                  />
+                  <span>Neo4j</span>
+                </div>
+                <div class="skill-item proficient">
+                  <img
+                    src="https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/mongodb/mongodb-original.svg"
+                    alt="MongoDB"
+                    class="tech-icon"
+                  />
+                  <span>MongoDB</span>
+                </div>
+                <div class="skill-item learning">
+                  <img
+                    src="https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/tailwindcss/tailwindcss-original.svg"
+                    alt="TailwindCSS"
+                    class="tech-icon"
+                  />
+                  <span>TailwindCSS</span>
+                </div>
+                <div class="skill-item learning">
+                  <img
+                    src="https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/threejs/threejs-original.svg"
+                    alt="Three.js"
+                    class="tech-icon"
+                  />
+                  <span>Three.js</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </GlassPanel>
+      </section>
+
+      <div class="info-container">
+        <GlassPanel title="Projects" showButton={false}>
+          <div class="project-item">
+            <h3>Infrastructure Upgrade & Optimization</h3>
+            <p class="project-details">
+              Company IT Investment | Budget Implementation
+            </p>
+            <ul class="project-list">
+              <li>
+                Designed and executed a company-wide hardware and software
+                upgrade plan to enhance client-facing operations.
+              </li>
+              <li>
+                Ensured optimal performance, scalability, and cost-efficiency
+                through strategic procurement and deployment.
+              </li>
+            </ul>
+          </div>
+
+          <div class="project-item mt-6">
+            <h3>Cloud-Based Workflow Transformation</h3>
+            <p class="project-details">
+              Enterprise Collaboration Enhancement | Google Drive Integration
+            </p>
+            <ul class="project-list">
+              <li>
+                Led the migration to standardized, cloud-driven workflow,
+                improving scalability and team collaboration.
+              </li>
+              <li>
+                Implemented best practices for data management, security, and
+                seamless cross-team access.
+              </li>
+            </ul>
+          </div>
+        </GlassPanel>
+      </div>
+    </div>
+    <div class="container-row">
+    <section class="info-container">
+      <GlassPanel title="Education" showButton={false}>
+        <div class="education-item">
+          <h3>AI and Big Data Expertise</h3>
+          <p class="education-year">Sept 2022 - May 2023</p>
+          <p class="education-place">Community College</p>
+          <ul class="education-list">
+            <li>
+              Developed AI models from scratch, training them on pre-processed
+              datasets.
+            </li>
+            <li>
+              Worked with LLMs, implementing machine learning algorithms for
+              data-driven insights.
+            </li>
+            <li>
+              Used Python, PySpark, and AWS to process large-scale datasets and
+              deploy AI models.
+            </li>
+          </ul>
+        </div>
+        <div class="education-item mt-6">
+          <h3>Web App Development</h3>
+          <p class="education-year">Sept 2020 - May 2022</p>
+          <p class="education-place">Community College</p>
+        </div>
+      </GlassPanel>
+    </section>
+
+    <section class="info-container">
+      <GlassPanel
+        title="Certifications"
+        buttonText="Contact Me"
+        buttonLink="/contact"
+      >
+        <div class="certification-item">
+          <h3>Cloud Computing</h3>
+          <p class="certification-provider">Google | January 2023</p>
+        </div>
+
+        <div class="certification-item mt-4">
+          <h3>Mobile App Development</h3>
+          <p class="certification-provider">Google | January 2023</p>
+        </div>
+      </GlassPanel>
+    </section>
+  </div>
+</div>
+</MainLayout>
+
+<style>
+  /* Skills section styling */
+  .skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+  }
+
+  /* Legend styling */
+  .skill-legend {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .legend-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  .legend-dot.proficient {
+    background-color: #4caf50; /* Green */
+  }
+
+  .legend-dot.learning {
+    background-color: #ff9800; /* Orange */
+  }
+
+  .legend-dot.planned {
+    background-color: #f44336; /* Red */
+  }
+
+  .skill-category h3 {
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+
+  /* Skill grid and items */
+  .skill-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+
+  .skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+    border: 2px solid transparent;
+  }
+
+  .skill-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .skill-item span {
+    margin-top: 0.5rem;
+    font-weight: 500;
+  }
+
+  /* Proficiency indicators */
+  .skill-item.proficient {
+    border-color: #4caf50; /* Green */
+  }
+
+  .skill-item.learning {
+    border-color: #ff9800; /* Orange */
+  }
+
+  .skill-item.planned {
+    border-color: #f44336; /* Red */
+  }
+
+  .skill-item.strength {
+    border-color: var(--color-primary);
+  }
+
+  /* Technology icons styling */
+  .tech-icon {
+    width: 50px;
+    height: 50px;
+    filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.4));
+  }
+
+  .strength-icon {
+    font-size: 30px;
+    margin-bottom: 0.5rem;
+  }
+
+  .strength-icon {
+    font-size: 20px;
+    margin-right: 10px;
+    display: inline-block;
+  }
+
+  .feature-list {
+    list-style-type: none !important;
+    padding-left: 0 !important;
+  }
+
+  .feature-list.no-bullets {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .feature-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 14px;
+  }
+
+  /* Minimalist Timeline styling */
+  .timeline-minimal {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .timeline-item-minimal {
+    position: relative;
+    padding-left: 1rem;
+    border-left: 2px solid var(--color-primary-light);
+    transition: all 0.3s ease;
+  }
+
+  .timeline-item-minimal:hover {
+    border-left-color: var(--color-primary);
+    transform: translateX(4px);
+    /* box-shadow: 0 0 8px rgba(152, 255, 197, 0.3); */
+  }
+
+  .timeline-header {
+    margin-bottom: 1rem;
+  }
+
+  .timeline-header h3 {
+    margin: 0.25rem 0;
+    color: var(--color-primary);
+  }
+
+  .timeline-date {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    color: var(--color-primary);
+  }
+
+  .company {
+    font-style: italic;
+    opacity: 0.8;
+    margin: 0;
+  }
+
+  /* List styling */
+  .experience-list,
+  .project-list,
+  .education-list {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .experience-list li,
+  .project-list li,
+  .education-list li {
+    margin-bottom: 0.5rem;
+  }
+
+  /* Education and certification styling */
+  .education-item,
+  .certification-item,
+  .achievement-item,
+  .project-item {
+    margin-bottom: 1.5rem;
+  }
+
+  .education-item h3,
+  .certification-item h3,
+  .achievement-item h3,
+  .project-item h3 {
+    color: var(--color-primary);
+    margin-bottom: 0.25rem;
+  }
+
+  .education-year,
+  .education-place,
+  .certification-provider {
+    font-style: italic;
+    opacity: 0.8;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Ensure default cursor on text elements */
+  p,
+  h1,
+  h2,
+  h3,
+  li,
+  span,
+  .glass-panel * {
+    cursor: default !important;
+  }
+
+  /* Keep pointer cursor for interactive elements */
+  a,
+  button,
+  .color-option,
+  .accent-button {
+    cursor: pointer !important;
+  }
+
+  /* Adjust container-row padding and gap */
+  .container-row {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem auto;
+    max-width: 100%;
+    padding: 0;
+  }
+
+  /* Adjust info-container padding */
+  .info-container {
+    position: relative;
+    z-index: 2;
+    margin: 0.5rem auto;
+    max-width: 100%;
+    padding: 0.5rem;
+  }
+</style>

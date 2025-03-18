@@ -5,6 +5,14 @@
   --color-primary-light: rgba(152, 255, 197, 0.5);
   --color-primary-medium: rgba(152, 255, 197, 0.8);
   --color-primary-dark: rgba(152, 255, 197, 0.95);
+  
+  /* Add font family variable */
+  --font-family-main: 'Montserrat', sans-serif;
+}
+
+/* Apply Montserrat to all elements */
+body {
+  font-family: var(--font-family-main);
 }
 
 /* Add any other global styles here */
