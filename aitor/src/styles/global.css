@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
 :root {
-  --color-primary: #98ffc5;
-  --color-primary-light: rgba(152, 255, 197, 0.5);
-  --color-primary-medium: rgba(152, 255, 197, 0.8);
-  --color-primary-dark: rgba(152, 255, 197, 0.95);
+  --color-primary: #37bd75;
+  --color-primary-light: rgba(55, 189, 117, 0.5);
+  --color-primary-medium: rgba(55, 189, 117, 0.8);
+  --color-primary-dark: rgba(55, 189, 117, 0.95);
   
   /* Add font family variable */
   --font-family-main: 'Montserrat', sans-serif;

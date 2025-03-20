@@ -6,7 +6,7 @@
   padding: 2rem;
   color: white;
   box-shadow: 0 4px 30px var(--color-primary-medium); 
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease;
   background-image: linear-gradient(
     to bottom right,
     rgba(25, 33, 52, 0.15),
@@ -16,8 +16,8 @@
   cursor: default; /* Add default cursor to the entire panel */
 }
 
-/* Add a subtle campfire glow to panels on hover */
-.glass-panel:hover {
+/* Removed hover effect for glass panels */
+/* .glass-panel:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 30px var(--color-primary-dark);
   border: 2px solid var(--color-primary-medium);
@@ -27,7 +27,7 @@
     rgba(25, 33, 52, 0.15) 60%,
     var(--color-primary-light)
   );
-}
+} */
 
 /* Add subtle accent colors to headings - Outer Wilds style */
 .glass-panel h2 {

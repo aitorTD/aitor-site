@@ -50,11 +50,11 @@
 
 /* Theme colors */
 .color-mint {
-  background-color: #98ffc5;
+  background-color: #37bd75;
 }
 
 .color-teal {
-  background-color: #398B93;
+  background-color: #2599b3;
 }
 
 .color-orange {
@@ -62,5 +62,5 @@
 }
 
 .color-indigo {
-  background-color: #7b68ee; /* Updated to medium slate blue */
+  background-color: #694673; /* Updated from medium slate blue to deep purple */
 }

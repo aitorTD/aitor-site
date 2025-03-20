@@ -12,31 +12,7 @@ import "../styles/main.css";
 
   <div class="container mx-auto px-0 pt-5 pb-5">
     <h1 class="section-title">About Me</h1>
-    <div class="info-container">
-      <div class="info-container">
-        <GlassPanel title="Idea" showButton={false}>
-          <div class="project-item">
-            <h3>
-              Poner boton para descargar el CV, link a Linkedln, a github, mis
-              skills, idiomas (C1 Inglés)
-            </h3>
-            <p class="project-details">
-              Company IT Investment | Budget Implementation
-            </p>
-            <ul class="project-list">
-              <li>
-                Designed and executed a company-wide hardware and software
-                upgrade plan to enhance client-facing operations.
-              </li>
-              <li>
-                Ensured optimal performance, scalability, and cost-efficiency
-                through strategic procurement and deployment.
-              </li>
-            </ul>
-          </div>
-        </GlassPanel>
-      </div>
-    </div>
+    
     <div class="info-container">
       <div class="info-container">
         <GlassPanel title="Professional Experience" showButton={false}>
@@ -462,6 +438,7 @@ import "../styles/main.css";
           title="Certifications"
           buttonText="Contact Me"
           buttonLink="/contact"
+          showButton={false}
         >
           <div class="certification-item">
             <h3>Cloud Computing</h3>
@@ -725,5 +702,83 @@ import "../styles/main.css";
     margin: 0.5rem auto;
     max-width: 100%;
     padding: 0.5rem;
+  }
+</style>
+
+<style>
+  /* Credentials panel styling - updated for minimalist design */
+  .credentials-container {
+    padding: 0.5rem 0;
+  }
+
+  .credentials-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .credentials-section {
+    flex: 1;
+  }
+
+  .credentials-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .credentials-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .credential-icon {
+    font-size: 1.1rem;
+    margin-right: 0.5rem;
+    min-width: 20px;
+    text-align: center;
+  }
+
+  .credential-text {
+    font-size: 0.9rem;
+  }
+
+  .social-links {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+  }
+
+  .social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+  }
+
+  .social-link:hover {
+    background: rgba(var(--color-primary-rgb), 0.2);
+    transform: translateY(-2px);
+  }
+
+  .social-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .cv-link {
+    background: var(--color-primary);
+    color: var(--color-text-inverse);
+  }
+
+  .cv-link:hover {
+    background: var(--color-primary-light);
   }
 </style>
