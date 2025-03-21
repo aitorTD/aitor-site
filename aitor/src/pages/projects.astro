@@ -1,0 +1,354 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Test from "../components/test.vue";
+import ThemeSwitcher from "../components/ThemeSwitcher.astro";
+import GlassPanel from "../components/GlassPanel.astro";
+import "../styles/main.css";
+
+// Project data structure
+const projects = [
+  {
+    title: "Personal Portfolio",
+    description: "A modern, interactive portfolio website built with Astro and Three.js, featuring a space-themed design inspired by Outer Wilds.",
+    github: "https://github.com/aitorTD/aitor-site",
+    image: "/images/projects/portfolio.png",
+    technologies: ["Astro", "Three.js", "TailwindCSS", "Vue.js", "JavaScript", "npm"],
+    featured: true
+  },
+  {
+    title: "Weather App",
+    description: "Basic weather application that fetches and displays current weather data for a given location, or you can search for a specifict city. You can also view the weather forecast from a map. Currently in development",
+    github: "https://github.com/aitorTD/weather-app",
+    image: "",
+    technologies: ["Astro", "JavaScript", "TailwindCSS", "API"],
+    featured: false
+  },
+  {
+    title: "AI Data Analyzer",
+    description: "Big data processing application that uses machine learning algorithms to extract insights from large datasets.",
+    github: "",
+    image: "",
+    technologies: ["Python", "PySpark", "Hadoop", "Neo4j", "AWS"],
+    featured: false
+  },
+  {
+    title: "E-commerce Platform",
+    description: "Fully-featured online store with product management, user authentication, and payment processing.",
+    github: "https://github.com/aitorTD/ecommerce",
+    image: "",
+    technologies: ["PHP", "Laravel", "MySQL", "JavaScript", "Bootstrap"],
+    featured: false
+  },
+  {
+    title: "E-commerce Platform",
+    description: "Fully-featured online store with product management, user authentication, and payment processing.",
+    github: "https://github.com/aitorTD/ecommerce",
+    image: "",
+    technologies: ["PHP", "Laravel", "MySQL", "JavaScript", "Bootstrap"],
+    featured: false
+  },
+  {
+    title: "E-commerce Platform",
+    description: "Fully-featured online store with product management, user authentication, and payment processing.",
+    github: "https://github.com/aitorTD/ecommerce",
+    image: "",
+    technologies: ["PHP", "Laravel", "MySQL", "JavaScript", "Bootstrap"],
+    featured: false
+  }
+];
+---
+
+<MainLayout title="Projects | Outer Wilds Explorer">
+  <Test client:visible slot="background" />
+  <ThemeSwitcher slot="theme-switcher" />
+
+  <div class="container mx-auto px-4 pt-5 pb-16">
+    <h1 class="section-title mb-8">Projects</h1>
+    
+    <!-- Featured Projects Section -->
+    <section class="mb-16">
+      {projects.filter(project => project.featured).length > 0 && (
+        <h2 class="text-2xl text-white mb-6 font-light tracking-wider">
+          <span class="text-primary">Featured</span> Projects
+        </h2>
+      )}
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {projects.filter(project => project.featured).map(project => (
+          <div class="project-card">
+            <div class="glass-panel project-panel h-full">
+              <div class="project-image-container">
+                <div class="project-image-overlay"></div>
+                <img 
+                  src={project.image || "/images/projects/placeholder.jpg"} 
+                  alt={project.title}
+                  class="project-image"
+                  loading="lazy"
+                />
+              </div>
+              
+              <div class="project-content">
+                <h3 class="project-title">{project.title}</h3>
+                <p class="project-description">{project.description}</p>
+                
+                <div class="project-tech-stack">
+                  <h4 class="tech-title">Technologies</h4>
+                  <div class="tech-tags">
+                    {project.technologies.map(tech => (
+                      <span class="tech-tag">{tech}</span>
+                    ))}
+                  </div>
+                </div>
+                
+                <div class="project-links">
+                  <a href={project.github} target="_blank" rel="noopener noreferrer" class="github-link">
+                    <svg class="h-5 w-5 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                      <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+                    </svg>
+                    View on GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+    
+    <!-- All Projects Section -->
+    <section>
+      <h2 class="text-2xl text-white mb-6 font-light tracking-wider">
+        <span class="text-primary">All</span> Projects
+      </h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {projects.filter(project => !project.featured).map(project => (
+          <div class="project-card">
+            <div class="glass-panel project-panel h-full">
+              <div class="project-image-container small">
+                <div class="project-image-overlay"></div>
+                <img 
+                  src={project.image || "/images/projects/placeholder.jpg"} 
+                  alt={project.title}
+                  class="project-image"
+                  loading="lazy"
+                />
+              </div>
+              
+              <div class="project-content">
+                <h3 class="project-title">{project.title}</h3>
+                <p class="project-description">{project.description}</p>
+                
+                <div class="project-tech-stack">
+                  <h4 class="tech-title">Technologies</h4>
+                  <div class="tech-tags">
+                    {project.technologies.map(tech => (
+                      <span class="tech-tag">{tech}</span>
+                    ))}
+                  </div>
+                </div>
+                
+                <div class="project-links">
+                  <a href={project.github} target="_blank" rel="noopener noreferrer" class="github-link">
+                    <svg class="h-5 w-5 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                      <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+                    </svg>
+                    View on GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  </div>
+</MainLayout>
+
+<style>
+  /* Project card styling */
+  .project-card {
+    transition: transform 0.3s ease;
+  }
+  
+  /* Removing the hover transform effect */
+  /* .project-card:hover {
+    transform: translateY(-5px);
+  } */
+  
+  .project-panel {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 0;
+  }
+  
+  /* Project image styling */
+  .project-image-container {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .project-image-container.small {
+    height: 160px;
+  }
+  
+  .project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .project-card:hover .project-image {
+    transform: scale(1.05);
+  }
+  
+  .project-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(5, 10, 36, 0.2), rgba(5, 10, 36, 0.8));
+    z-index: 1;
+  }
+  
+  /* Project content styling */
+  .project-content {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .project-title {
+    font-size: 1.25rem;
+    color: var(--color-primary);
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+  }
+  
+  .project-description {
+    color: rgba(240, 245, 255, 0.8);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    flex: 1;
+  }
+  
+  /* Technology tags */
+  .project-tech-stack {
+    margin-bottom: 1.5rem;
+  }
+  
+  .tech-title {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgba(240, 245, 255, 0.6);
+    margin-bottom: 0.5rem;
+  }
+  
+  .tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .tech-tag {
+    background: rgb(var(--color-primary-rgb)) !important;
+  }
+
+  .project-content .tech-tag {
+    background: rgba(var(--color-primary-rgb), 1) !important;
+    color: white;
+    font-size: 0.75rem;
+    padding: 0.35rem 0.8rem;
+    border-radius: 5px !important; /* Force the bean shape */
+    border: 1px solid rgba(var(--color-primary-rgb), 0.5);
+    transition: all 0.2s ease;
+    font-weight: 500;
+    box-shadow: 0 2px 4px rgb(80, 80, 80);
+    display: inline-block;
+  }
+  
+  .project-content .tech-tag:hover {
+    background: rgba(var(--color-primary-rgb), 0.6);
+    transform: translateY(-2px);
+  }
+  
+  /* Project links */
+  .project-links {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .github-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-primary);
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .github-link:hover {
+    background: var(--color-primary-light);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(var(--color-primary-rgb), 0.4);
+  }
+  
+  .github-link:active {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(var(--color-primary-rgb), 0.3);
+  }
+  
+  .github-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent
+    );
+    transition: 0.5s;
+  }
+  
+  .github-link:hover::before {
+    left: 100%;
+  }
+  
+  /* Section title styling */
+  .section-title {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 2rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .project-image-container,
+    .project-image-container.small {
+      height: 180px;
+    }
+  }
+</style>
