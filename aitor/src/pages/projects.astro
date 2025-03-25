@@ -9,56 +9,56 @@ import "../styles/main.css";
 const projects = [
   {
     title: "Personal Portfolio",
-    description: "A modern, interactive portfolio website built with Astro and Three.js, featuring a space-themed design inspired by Outer Wilds.",
+    description: "A dynamic, interactive portfolio built with Astro and Three.js, showcasing an immersive space-themed design inspired by Outer Wilds. This project highlights a blend of advanced 3D animations, responsive web layouts, and efficient modular architecture, reflecting both technical expertise and a passion for creative user experiences.",
     github: "https://github.com/aitorTD/aitor-site",
     image: "/images/projects/portfolio.png",
     technologies: ["Astro", "Three.js", "TailwindCSS", "Vue.js", "JavaScript", "npm"],
     featured: true
   },
   {
-    title: "Weather App",
-    description: "Basic weather application that fetches and displays current weather data for a given location, or you can search for a specifict city. You can also view the weather forecast from a map. Currently in development",
+    title: "Desk Label generator",
+    description: "A specialized Cambridge Exams solution that merges desk labels with password files, minimizing paper usage and promoting environmental sustainability. This tool streamlines exam logistics by combining essential documents into a single printout, reducing waste and simplifying administrative workflows.",
+    github: "https://github.com/aitorTD/FusionDeskLabels.git",
+    image: "/images/projects/deskLabelGenerator.png",
+    technologies: ["Python"],
+    featured: false
+  },
+  {
+    title: "Basic Weather Application",
+    description: "A work-in-progress weather app that fetches and displays real-time conditions for your current location or a searched city. It also supports map-based forecasting, offering a visual overview of upcoming weather patterns. This project demonstrates a practical approach to API integration and user-friendly UI design, with ongoing enhancements planned for expanded functionality.",
     github: "https://github.com/aitorTD/weather-app",
-    image: "",
+    image: "/images/projects/weather-app.png",
     technologies: ["Astro", "JavaScript", "TailwindCSS", "API"],
     featured: false
   },
   {
-    title: "AI Data Analyzer",
-    description: "Big data processing application that uses machine learning algorithms to extract insights from large datasets.",
-    github: "",
+    title: "Face Recognition App using AI",
+    description: "An AI-powered face recognition application designed to detect and protect child faces in images. Leveraging a pre-trained model for precise identification, the system offers the option to blur recognized child faces, safeguarding privacy and ensuring ethical data handling. This project underscores a commitment to responsible AI and practical machine learning solutions.",
+    github: "https://github.com/aitorTD/django_faces.git",
     image: "",
-    technologies: ["Python", "PySpark", "Hadoop", "Neo4j", "AWS"],
+    technologies: ["Python", "Django", "AWS Buckets", "JavaScript"],
+    featured: true
+  },
+  {
+    title: "Google Chatbot App for Android",
+    description: "An AI-powered chatbot application that allows users to schedule various types of appointments and leverages TTS (Text-to-Speech) functionality for enhanced accessibility. This project demonstrates seamless natural language processing to streamline scheduling, offering a convenient and user-friendly Android experience.",
+    github: "https://github.com/aitorTD/TeHabloMeHablas_Android",
+    image: "",
+    technologies: ["Android", "Java", "Android TextToSpeech (TTS) API", "Android Studio"],
     featured: false
   },
   {
-    title: "E-commerce Platform",
-    description: "Fully-featured online store with product management, user authentication, and payment processing.",
+    title: "IMDb Web Scraper",
+    description: "A specialized tool for extracting key movie data from IMDb. Ideal for creating custom watchlists, performing data analysis, or enabling personalized recommendations, this scraper ensures accurate, up-to-date information through efficient data crawling methods.",
     github: "https://github.com/aitorTD/ecommerce",
     image: "",
-    technologies: ["PHP", "Laravel", "MySQL", "JavaScript", "Bootstrap"],
-    featured: false
-  },
-  {
-    title: "E-commerce Platform",
-    description: "Fully-featured online store with product management, user authentication, and payment processing.",
-    github: "https://github.com/aitorTD/ecommerce",
-    image: "",
-    technologies: ["PHP", "Laravel", "MySQL", "JavaScript", "Bootstrap"],
-    featured: false
-  },
-  {
-    title: "E-commerce Platform",
-    description: "Fully-featured online store with product management, user authentication, and payment processing.",
-    github: "https://github.com/aitorTD/ecommerce",
-    image: "",
-    technologies: ["PHP", "Laravel", "MySQL", "JavaScript", "Bootstrap"],
+    technologies: ["Python", "Requests"],
     featured: false
   }
 ];
 ---
 
-<MainLayout title="Projects | Outer Wilds Explorer">
+<MainLayout title="Projects | Aitor's Portfolio">
   <Test client:visible slot="background" />
   <ThemeSwitcher slot="theme-switcher" />
 
