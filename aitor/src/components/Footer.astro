@@ -93,6 +93,7 @@ const socialLinks = [
     <!-- Copyright -->
     <div class="text-center pt-8 border-t border-gray-800 text-gray-500 text-xs fade-in-up" style="--delay: 0.4s">
       <p>&copy; {currentYear} <span class="font-medium">Aitor</span>. All rights reserved.</p>
+      <p class="mt-2">Designed and developed with <span class="text-red-400">♥</span> by Aitor Trillo Díaz</p>
     </div>
   </div>
 </footer>
@@ -150,6 +151,18 @@ const socialLinks = [
     color: var(--color-primary);
     transform: translateY(-3px);
     filter: drop-shadow(0 0 8px var(--color-primary-medium));
+  }
+  
+  /* Make social icons larger on mobile */
+  @media (max-width: 768px) {
+    .social-icon-link {
+      padding: 10px;
+    }
+    
+    .social-icon-link svg {
+      width: 24px;
+      height: 24px;
+    }
   }
   
   /* Footer glow effect */
