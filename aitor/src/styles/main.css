@@ -6,6 +6,3 @@
 @import "./components/animations.css";
 @import "./components/container-layout.css";
 @import "./components/feature-list.css";
-
-/* Add this import at the end of your main.css file */
-@import './mobile.css';
