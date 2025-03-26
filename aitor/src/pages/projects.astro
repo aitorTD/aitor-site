@@ -11,7 +11,7 @@ const projects = [
     title: "Personal Portfolio",
     description: "A dynamic, interactive portfolio built with Astro and Three.js, showcasing an immersive space-themed design inspired by Outer Wilds. This project highlights a blend of advanced 3D animations, responsive web layouts, and efficient modular architecture, reflecting both technical expertise and a passion for creative user experiences.",
     github: "https://github.com/aitorTD/aitor-site",
-    image: "/images/projects/portfolio.png",
+    image: "/images/projects/portfolio.webp",
     technologies: ["Astro", "Three.js", "TailwindCSS", "Vue.js", "JavaScript", "npm"],
     featured: true
   },
@@ -19,7 +19,7 @@ const projects = [
     title: "Desk Label generator",
     description: "A specialized Cambridge Exams solution that merges desk labels with password files, minimizing paper usage and promoting environmental sustainability. This tool streamlines exam logistics by combining essential documents into a single printout, reducing waste and simplifying administrative workflows.",
     github: "https://github.com/aitorTD/FusionDeskLabels.git",
-    image: "/images/projects/deskLabelGenerator.png",
+    image: "/images/projects/deskLabelGenerator.webp",
     technologies: ["Python"],
     featured: false
   },
@@ -27,7 +27,7 @@ const projects = [
     title: "Basic Weather Application",
     description: "A work-in-progress weather app that fetches and displays real-time conditions for your current location or a searched city. It also supports map-based forecasting, offering a visual overview of upcoming weather patterns. This project demonstrates a practical approach to API integration and user-friendly UI design, with ongoing enhancements planned for expanded functionality.",
     github: "https://github.com/aitorTD/weather-app",
-    image: "/images/projects/weather-app.png",
+    image: "/images/projects/weather-app.webp",
     technologies: ["Astro", "JavaScript", "TailwindCSS", "API"],
     featured: false
   },
@@ -80,7 +80,7 @@ const projects = [
               <div class="project-image-container">
                 <div class="project-image-overlay"></div>
                 <img 
-                  src={project.image || "/images/projects/placeholder.jpg"} 
+                  src={project.image || "/images/projects/placeholder.webp"} 
                   alt={project.title}
                   class="project-image"
                   loading="lazy"
@@ -128,7 +128,7 @@ const projects = [
               <div class="project-image-container small">
                 <div class="project-image-overlay"></div>
                 <img 
-                  src={project.image || "/images/projects/placeholder.jpg"} 
+                  src={project.image || "/images/projects/placeholder.webp"} 
                   alt={project.title}
                   class="project-image"
                   loading="lazy"
