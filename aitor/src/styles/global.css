@@ -27,16 +27,25 @@ body {
   }
   
   p, li, .project-description, .contact-text {
-    font-size: 0.95rem;
+    font-size: 0.9rem; /* Reduced from 0.95rem */
     line-height: 1.5;
   }
   
   h2, .section-title {
-    font-size: 1.6rem;
+    font-size: 1.5rem; /* Reduced from 1.6rem */
   }
   
   h3 {
-    font-size: 1.2rem;
+    font-size: 1.1rem; /* Reduced from 1.2rem */
+  }
+  
+  /* Additional font size reductions for mobile */
+  .project-title, .glass-panel-title {
+    font-size: 1.3rem;
+  }
+  
+  .tag, .tech-tag, .project-tags span {
+    font-size: 0.75rem;
   }
 }
 
@@ -56,20 +65,41 @@ body {
   }
   
   p, li, .project-description, .contact-text {
-    font-size: 0.8rem;
+    font-size: 0.75rem; /* Reduced from 0.8rem */
     line-height: 1.4;
   }
   
   h2, .section-title {
-    font-size: 1.3rem;
+    font-size: 1.2rem; /* Reduced from 1.3rem */
   }
   
   h3 {
-    font-size: 1.1rem;
+    font-size: 1rem; /* Reduced from 1.1rem */
   }
   
   .tag, .cv-tag, .tech-tag, .project-tags span {
-    font-size: 0.7rem;
+    font-size: 0.65rem; /* Reduced from 0.7rem */
     padding: 0.2rem 0.4rem;
+  }
+  
+  /* Additional font size reductions for small screens */
+  .intro-title {
+    font-size: 1.1rem;
+  }
+  
+  .intro-description {
+    font-size: 0.75rem;
+  }
+  
+  .feature-list li strong {
+    font-size: 0.8rem;
+  }
+  
+  .contact-link, .social-icon-link {
+    font-size: 0.75rem;
+  }
+  
+  .footer-link {
+    font-size: 0.8rem;
   }
 }

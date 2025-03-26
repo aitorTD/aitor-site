@@ -63,3 +63,20 @@
 .glass-panel .accent-button {
   cursor: pointer !important;
 }
+
+
+/* Add this at the end of the file */
+@media (max-width: 768px) {
+  .glass-panel {
+    padding: 1.5rem;
+    width: 100%;
+    margin: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .glass-panel {
+    padding: 1.25rem 1rem;
+    border-radius: 10px;
+  }
+}

@@ -19,10 +19,27 @@
 @media (max-width: 768px) {
   .container-row {
     flex-direction: column;
-    gap: 2rem;
+    gap: 0.5rem;
+    padding: 0 0.5rem; /* Reduced from 0.75rem to make panels wider */
+    margin: 1rem auto;
   }
   
   .container-row .info-container {
     width: 100%;
+    padding: 0;
+    margin: 0 0 0.5rem 0;
+    overflow: visible; /* Allow content to overflow for negative margins */
+  }
+}
+
+@media (max-width: 480px) {
+  .container-row {
+    padding: 0 0.25rem; /* Reduced from 0.5rem to make panels even wider on small phones */
+    margin: 0.75rem auto;
+    gap: 0.25rem;
+  }
+  
+  .container-row .info-container {
+    margin: 0 0 0.25rem 0;
   }
 }
