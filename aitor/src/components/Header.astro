@@ -111,7 +111,47 @@ const navItems = [
     transform: translateX(100%);
   }
   
-  /* Rest of the styles remain unchanged */
+  /* Mobile menu styles */
+  .mobile-menu {
+    background-color: rgba(5, 10, 36, 0.95);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    max-height: 0;
+    overflow: hidden;
+  }
+  
+  .mobile-menu.active {
+    max-height: 300px;
+    border-bottom: 1px solid var(--color-primary-light, rgba(144, 176, 131, 0.2));
+  }
+  
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+  }
+  
+  .hamburger span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: white;
+    transition: all 0.3s ease;
+  }
+  
+  .mobile-menu-button.active .hamburger span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  
+  .mobile-menu-button.active .hamburger span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .mobile-menu-button.active .hamburger span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
 </style>
 
 <script>
@@ -127,7 +167,18 @@ const navItems = [
       mobileMenuButton.addEventListener('click', () => {
         mobileMenuButton.classList.toggle('active');
         mobileMenu.classList.toggle('active');
-        mobileMenu.classList.toggle('hidden');
+        
+        // Instead of toggling hidden class, we'll use the active class to control visibility
+        if (mobileMenu.classList.contains('active')) {
+          mobileMenu.classList.remove('hidden');
+        } else {
+          // Add a small delay before hiding to allow for animation
+          setTimeout(() => {
+            if (!mobileMenu.classList.contains('active')) {
+              mobileMenu.classList.add('hidden');
+            }
+          }, 300);
+        }
       });
     }
     
