@@ -13,6 +13,8 @@
     "@tailwindcss/vite": "^4.0.14",
     "@tresjs/cientos": "^4.2.0",
     "@tresjs/core": "^4.3.3",
+    "@vercel/analytics": "^1.5.0",
+    "@vercel/speed-insights": "^1.2.0",
     "astro": "^5.5.2",
     "tailwindcss": "^4.0.14",
     "three": "^0.174.0",
