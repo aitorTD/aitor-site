@@ -63,3 +63,47 @@
 .glass-panel .accent-button {
   cursor: pointer !important;
 }
+
+
+/* Standardized mobile styles for glass panels */
+@media (max-width: 768px) {
+  .glass-panel {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    border-width: 1px;
+    padding: 1.25rem !important;
+    box-sizing: border-box;
+  }
+  
+  .glass-panel h2,
+  .glass-panel-title {
+    font-size: 1.5rem !important;
+    padding-bottom: 0.4rem;
+    margin-bottom: 0.75rem !important;
+  }
+  
+  .glass-panel p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .glass-panel {
+    padding: 1rem 0.75rem !important;
+    margin-bottom: 0.75rem;
+  }
+  
+  .glass-panel h2,
+  .glass-panel-title {
+    font-size: 1.4rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+  
+  .glass-panel p {
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+  }
+}

@@ -206,7 +206,61 @@ const projects = [
     transform: scale(1.05);
   }
   
-  .project-image-overlay {
+  /* Add these mobile-specific styles */
+  @media (max-width: 768px) {
+    .container {
+      padding-left: 0.5rem !important;
+      padding-right: 0.5rem !important;
+      max-width: 100% !important;
+    }
+    
+    .project-panel {
+      width: 100% !important;
+    }
+    
+    .project-image-container {
+      height: 180px;
+    }
+    
+    .project-image-container.small {
+      height: 140px;
+    }
+    
+    .project-content {
+      padding: 1.25rem;
+    }
+    
+    .tech-tags {
+      gap: 0.4rem;
+    }
+    
+    .tech-tag {
+      font-size: 0.7rem;
+      padding: 0.2rem 0.5rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      padding-left: 0.25rem !important;
+      padding-right: 0.25rem !important;
+    }
+    
+    .project-image-container {
+      height: 160px;
+    }
+    
+    .project-image-container.small {
+      height: 120px;
+    }
+    
+    .project-content {
+      padding: 1rem;
+    }
+  }
+
+
+.project-image-overlay {
     position: absolute;
     top: 0;
     left: 0;

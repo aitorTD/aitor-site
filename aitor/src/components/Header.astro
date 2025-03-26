@@ -113,7 +113,7 @@ const navItems = [
   
   /* Mobile menu styles */
   .mobile-menu {
-    background-color: rgba(5, 10, 36, 0.95);
+    background-color: rgba(5, 10, 36, 0.2);
     backdrop-filter: blur(10px);
     transition: all 0.3s ease;
     max-height: 0;
@@ -123,6 +123,30 @@ const navItems = [
   .mobile-menu.active {
     max-height: 300px;
     border-bottom: 1px solid var(--color-primary-light, rgba(144, 176, 131, 0.2));
+  }
+  
+  /* Fix for mobile menu button */
+  .mobile-menu-button {
+    margin-right: 25px;
+    position: relative;
+    z-index: 20;
+  }
+  
+  /* Ensure container doesn't overflow */
+  .container {
+    overflow: visible;
+  }
+  
+  /* Adjust hamburger menu position */
+  @media (max-width: 768px) {
+    .mobile-menu-button {
+      margin-left: auto;
+    }
+    
+    .container {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
   }
   
   .hamburger {

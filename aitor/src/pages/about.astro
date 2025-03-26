@@ -786,3 +786,56 @@ import "../styles/main.css";
     background: var(--color-primary-light);
   }
 </style>
+
+<style>
+  /* Add these styles at the end of your about.astro file */
+  @media (max-width: 768px) {
+    .container {
+      padding-left: 0.5rem !important;
+      padding-right: 0.5rem !important;
+      max-width: 100% !important;
+    }
+    
+    .info-container {
+      width: 100% !important;
+      padding: 0 !important;
+    }
+    
+    .skill-grid {
+      grid-template-columns: repeat(3, 1fr) !important;
+      gap: 0.75rem !important;
+    }
+    
+    .skill-item {
+      padding: 0.5rem !important;
+    }
+    
+    .tech-icon {
+      width: 2rem !important;
+      height: 2rem !important;
+    }
+    
+    .timeline-item-minimal {
+      padding-left: 1rem !important;
+    }
+    
+    .timeline-date {
+      margin-bottom: 0.25rem !important;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      padding-left: 0.25rem !important;
+      padding-right: 0.25rem !important;
+    }
+    
+    .skill-grid {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+    
+    .timeline-item-minimal {
+      padding-left: 0.5rem !important;
+    }
+  }
+</style>
