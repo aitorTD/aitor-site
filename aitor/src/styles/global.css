@@ -15,4 +15,61 @@ body {
   font-family: var(--font-family-main);
 }
 
-/* Add any other global styles here */
+/* Add these global mobile styles to your global.css file */
+
+@media (max-width: 768px) {
+  .glass-panel,
+  .info-container,
+  .contact-content,
+  .project-panel {
+    max-width: 95%;
+    margin: 0 auto;
+  }
+  
+  p, li, .project-description, .contact-text {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  h2, .section-title {
+    font-size: 1.6rem;
+  }
+  
+  h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .glass-panel,
+  .info-container,
+  .contact-content,
+  .project-panel {
+    width: 100%;
+    max-width: 100%;
+    padding: 1rem 0.25rem;
+    margin: 0;
+  }
+  
+  .content {
+    padding: 1rem 0.5rem;
+  }
+  
+  p, li, .project-description, .contact-text {
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+  
+  h2, .section-title {
+    font-size: 1.3rem;
+  }
+  
+  h3 {
+    font-size: 1.1rem;
+  }
+  
+  .tag, .cv-tag, .tech-tag, .project-tags span {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.4rem;
+  }
+}

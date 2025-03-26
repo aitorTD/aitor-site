@@ -44,6 +44,22 @@ const { title, description = "Explore the cosmos inspired by Outer Wilds" } = As
         padding-top: 120px;
         margin-top: 0;
       }
+      
+      /* Media queries for responsive design */
+      @media (max-width: 768px) {
+        .content {
+          padding: 1.5rem;
+          padding-top: 100px;
+        }
+      }
+      
+      @media (max-width: 480px) {
+        .content {
+          padding: 1rem;
+          padding-top: 90px;
+          font-size: 0.95rem;
+        }
+      }
     </style>
     <script is:inline>
       // Simple performance monitoring
