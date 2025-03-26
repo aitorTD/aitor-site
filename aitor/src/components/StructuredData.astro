@@ -1,0 +1,13 @@
+---
+export interface Props {
+  type: 'Person' | 'WebSite' | 'WebPage' | 'Project';
+  data: Record<string, any>;
+}
+
+const { type, data } = Astro.props;
+
+// Ensure the data is properly formatted for JSON-LD
+const jsonLD = JSON.stringify(data);
+---
+
+<script type="application/ld+json" set:html={jsonLD}></script>

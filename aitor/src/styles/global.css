@@ -8,11 +8,29 @@
   
   /* Add font family variable */
   --font-family-main: 'Montserrat', sans-serif;
+  
+  /* Add content visibility strategy variables */
+  --content-visibility-strategy: auto;
+  --content-intrinsic-size: 0 500px;
 }
 
 /* Apply Montserrat to all elements */
 body {
   font-family: var(--font-family-main);
+  text-rendering: optimizeSpeed;
+}
+
+/* Optimize image loading */
+img {
+  content-visibility: auto;
+  contain-intrinsic-size: var(--content-intrinsic-size);
+}
+
+/* Optimize non-critical sections */
+.info-container:not(:first-of-type),
+.container-row:not(:first-of-type) {
+  content-visibility: var(--content-visibility-strategy);
+  contain-intrinsic-size: var(--content-intrinsic-size);
 }
 
 /* Add these global mobile styles to your global.css file */

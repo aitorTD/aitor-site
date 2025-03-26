@@ -4,13 +4,60 @@ import Test from "../components/test.vue";
 import ThemeSwitcher from "../components/ThemeSwitcher.astro";
 import ProfileSection from "../components/ProfileSection.astro";
 import GlassPanel from "../components/GlassPanel.astro";
+import StructuredData from "../components/StructuredData.astro";
 import "../styles/main.css";
+
+const pageTitle = "Aitor | Software Developer & AI Specialist";
+const pageDescription = "Aitor is a skilled software developer specializing in web development, cloud solutions, and AI-driven applications with expertise in JavaScript, Python, and modern frameworks.";
+
+// Person structured data
+const personData = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Aitor",
+  "url": "https://aitortd.vercel.app",
+  "image": "https://aitortd.vercel.app/images/aitor.jpg",
+  "jobTitle": "Software Developer",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "CL Granada"
+  },
+  "sameAs": [
+    "https://github.com/aitorTD",
+    "https://www.linkedin.com/in/aitortd"
+  ],
+  "knowsAbout": [
+    "Web Development",
+    "JavaScript",
+    "Python",
+    "AI",
+    "Cloud Solutions"
+  ]
+};
+
+// Website structured data
+const websiteData = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Aitor's Portfolio",
+  "url": "https://aitortd.vercel.app",
+  "description": pageDescription,
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://aitortd.vercel.app/search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+};
 ---
 
-<MainLayout title="Home | Aitor's Portfolio">
+<MainLayout 
+  title={pageTitle} 
+  description={pageDescription}
+  image="/images/projects/portfolio.png"
+>
+  <StructuredData slot="head" type="Person" data={personData} />
+  <StructuredData slot="head" type="WebSite" data={websiteData} />
   <Test client:visible slot="background" />
-  <!-- Changed from client:load to client:visible -->
-
   <ThemeSwitcher slot="theme-switcher" />
 
   <ProfileSection />
