@@ -1,4 +1,4 @@
-# Aitor's Portfolio Website
+# My Portfolio Website
 
 ## Project Overview
 This is a dynamic, interactive portfolio website showcasing various projects with their descriptions and technology stacks. The site features an immersive space-themed design inspired by Outer Wilds, blending advanced 3D animations with responsive web layouts.
